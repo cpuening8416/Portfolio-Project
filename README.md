@@ -26,7 +26,8 @@ Below is the Desktop View of my web page:
 
 Below is the Mobile View of my web page:
 
-![Mobile view](/images/Mobile_View.png)
+![Mobile view](/images/mobile1.png)
+![Mobile view](/images/mobile2.png)
 
 ### Links
 
@@ -39,22 +40,52 @@ Below is the Mobile View of my web page:
 - Semantic HTML5 markup
 - CSS custom properties
 - CSS Grid
-- Flexbox
 - Mobile-first workflow
 
 ### What I learned
 
-I Learned a lot about CSS Grids and the CSS Grid Items. It makes design web pages a lot simpler in terms of divs and specific layouts that would require a lot of additional work and sometimes a lot of confusion. A piece of code that I am proud of is displayed below:
+I Learned a lot about CSS Grids and the CSS Grid Items. It makes design web pages a lot simpler in terms of divs and specific layouts that would require a lot of additional work and sometimes a lot of confusion. A piece of code that I am proud of is displayed below because it is a mobile first build and includes the use of CSS grids.
 
 
 ```css
-.grid-container{
-    display: grid;
-    grid-template-areas:
-    'header header header header header header' 
-    'left left left right right right'
-    'left left left right right right';
- }
+@media(max-width: 800px)
+{
+	.grid-container{
+		background-color: #9EBFB5;
+		display: grid;
+		grid-template-areas: 
+		'top top top top top top'
+		'bottom bottom bottom bottom bottom bottom';
+		text-align: left;
+		margin: 0 auto;
+	}
+	
+	.grid-item2{
+		grid-area: top;
+		border-radius: 10px;
+		padding: 5%;
+		width: 70%;
+		margin: auto;
+	}
+
+	img{
+		max-width: 110%;
+		height: auto;
+		border-radius: 10px;
+		margin: 0 auto;
+	}
+
+	.grid-item1{
+		grid-area: bottom;
+		padding: 2%;
+		border-radius: 10px;
+		max-width: 85%;
+		height: auto;
+		align-self: center;
+		margin: 20px 10px 10px 10px;
+	}
+	
+}
 ```
 
 
