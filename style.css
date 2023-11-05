@@ -1,0 +1,90 @@
+body{
+	background-color:#EEEEEE;
+	font-family: Ubuntu;
+	padding: 6%;
+}
+
+ul, ol{
+	font-size:16px;
+}
+
+h1, footer{
+	text-align: center;
+}
+
+strong{
+	font-size:20px;
+}
+
+.grid-container{
+	background-color: #9EBFB5;
+	display: grid;
+	margin: 0 auto;
+	grid-template-areas: 
+	'top top top bottom bottom bottom'
+	'top top top bottom bottom bottom';
+	text-align: left;
+	line-height: 1.6;
+	border-radius: 10px;
+}
+
+.grid-item2{
+	grid-area: top;
+	padding: 5%;
+	border-radius: 10px;
+	width: 80%;
+}
+
+img{
+	max-width: 170%;
+	height: auto;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+
+.grid-item1{
+	grid-area: bottom;
+	background-position: center;
+	border-radius: 10px 10px 10px 10px;
+	padding: 2%;
+	margin: 100px 10px 10px 10px;
+}
+
+@media(max-width: 800px)
+{
+	.grid-container{
+		background-color: #9EBFB5;
+		display: grid;
+		grid-template-areas: 
+		'top top top top top top'
+		'bottom bottom bottom bottom bottom bottom';
+		text-align: left;
+		margin: 0 auto;
+	}
+	
+	.grid-item2{
+		grid-area: top;
+		border-radius: 10px;
+		padding: 5%;
+		width: 70%;
+		margin: auto;
+	}
+
+	img{
+		max-width: 110%;
+		height: auto;
+		border-radius: 10px;
+		margin: 0 auto;
+	}
+
+	.grid-item1{
+		grid-area: bottom;
+		padding: 2%;
+		border-radius: 10px;
+		max-width: 85%;
+		height: auto;
+		align-self: center;
+		margin: 20px 10px 10px 10px;
+	}
+	
+}
